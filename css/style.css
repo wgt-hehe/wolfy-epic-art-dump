@@ -1,0 +1,224 @@
+/* color variables */
+:root{
+    --dark: #0e0101;
+    --regular: #7c7c7c;
+    --light: #ded9d9;
+
+    --red: #ff2567;
+    --light-red: #ffbec8;
+    --dark-red: #800039;
+
+    --yellow: #ffe732;
+}
+/* general stuff */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive, 'MS comic sans';
+    user-select: none;
+    color: var(--dark);
+}
+header{
+    height: fit-content;
+}
+footer{
+    background: var(--red);
+    color: white;
+    align-items: center;
+    margin-bottom: 16px !important;
+}
+footer #round-boi{
+    cursor: pointer;
+    transition: width .5s;
+    width: 90px;
+}
+footer #round-boi:hover{
+    width: 160px;
+}
+a{ text-decoration: none; }
+hr{
+    height: 1px;
+    border: 0;
+    background: white;
+}
+/* general classes */
+.standard-width{
+    width: 1200px;
+    max-width: 95%;
+    margin: auto;
+}
+.banner-desktop{
+    width: 100%;
+    max-width: 95%;
+}
+.banner-mobile{
+    margin: auto;
+    position: relative;
+    bottom: -30px;
+    width: 60%;
+}
+.page-indicator{
+    position: relative;
+}
+.page-indicator::after{
+    content: "YOU ARE HERE!";
+    width: fit-content;
+    position: absolute;
+    font-size: 0.5rem;    
+    left: -10px;
+    top: -8px;
+    transform: rotateZ(-5deg);
+    color: var(--red);
+    background: white;
+}
+.note-sheet{
+    position: relative;
+    border:1px solid  var(--yellow);
+    width: 300px;
+    height: fit-content;
+    min-width: 300px;
+    word-wrap: break-word;
+    transform: rotateZ(5deg);
+}
+.note-sheet-reverse{
+    transform: rotateZ(-3deg) !important;
+}
+
+/* btn */
+button{
+    cursor: pointer;
+    background: none;
+}
+*[class^=btn]{
+    width: fit-content;
+}
+.btn-1{
+    transform: translateY(0);
+    border: var(--light) solid 1px
+}
+.btn-1:hover{
+    transform: translateY(-5px);
+    background: var(--light);
+}
+.btn-2{
+    transform: translateY(0);
+    color: var(--red);
+    border: var(--light-red) solid 1px
+}
+.btn-2:hover{
+    transform: translateY(-5px);
+    background: var(--light-red);
+}
+.btn-selected{
+    background: var(--red);
+    color: white;
+    border: 0;
+}
+.btn-selected:hover{
+    background: var(--dark-red);
+    color: white;
+    border: 0;
+}
+/* orientations */
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.s-around{ justify-content: space-around; }
+.s-between{ justify-content: space-between; }
+.s-center{ justify-content: center; }
+
+/* paragraph sizes and styles */
+.parag1{ font-size: .8rem; }
+.parag2{ font-size: .75rem; }
+.parag3{ font-size: .6rem; }
+.parag-white{ color: white }
+.parag-grey{ color: var(--regular) }
+
+/* gaps */
+.g8{ gap: 8px; }
+.g16{ gap: 16px; }
+.g32{ gap: 32px; }
+.g64{ gap: 64px; }
+
+/* paddings */
+.p4-8{ padding: 4px 8px; }
+.p8{ padding: 8px; }
+.p16{ padding: 16px; }
+.p8-16{ padding: 8px 16px; }
+.p32{ padding: 32px; }
+
+/* margins */
+.m8{ margin: 8px; }
+.m16{ margin: 16px; }
+.m16-8{ margin: 16px 8px; }
+.m32{ margin: 32px; }
+.m64{ margin: 64px; }
+
+/* border stuff */
+.b-shadow-8{ box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.20); }
+.b-shadow-16{ box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.20); }
+.radius-8{border-radius: 8px;}
+
+/* sizes */
+.w50 { width: 50% }
+.w100 { width: 100%; }
+.h50 { height: 50% }
+.h100 { height: 100%; }
+.wfit { width: fit-content; }
+.hfit { height: fit-content; }
+
+/* gallery elements */
+#gallery-main-area{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.img-gallery{
+    transition: .2s;
+    cursor: pointer;
+}
+.img-gallery:hover{
+    transform: translateY(-10px) rotateZ(1deg);
+    box-shadow: 0px 10px 50px rgba(255, 255, 255, 1);
+}
+.img-popup{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: calc(50vh);
+    left: calc(50vw);
+    transform: translateX(-50%) translateY(-50%);
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    width: 45vw;
+    z-index: 2;
+    background: white;
+}
+.img-popup > img {
+    border-radius: 8px;
+    width: 100%;
+}
+.close-popup{
+    position: absolute;
+    border: 0;
+    padding: 16px 20px;
+    border-radius: 0 16px 16px 0;
+    background: white;
+    transform: translateX(43vw) translateY(-16px);
+}
+.popup-block{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0,0,0,.20), rgba(190, 190, 190, 0.2));
+    backdrop-filter: blur(2px);
+}

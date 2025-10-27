@@ -1,0 +1,62 @@
+/* res stuff */
+.mobile-show{
+    display: none;
+}
+.mobile-hide{
+    display: block;
+}
+@media (max-width: 768px) {
+    .mobile-show{
+        display: block;
+    }
+    .mobile-hide{
+        display: none;
+    }
+
+    header > nav * {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    footer{
+        flex-direction: column-reverse !important;
+    }
+
+    /* home */
+    #main-home{
+        padding: 8px;
+    }
+    #main-home > section{
+        flex-direction: column-reverse;
+    }
+    *[class^=note-sheet]{
+        width: 100%;
+        transform: none !important;
+    }
+    *[class^=note-sheet]::before{
+        padding: 0;
+    }
+    #recent-stuff-home{
+        flex-direction: column;
+    }
+
+    /* gallery */
+    #gallery-main-area{
+        display: flex;
+        flex-direction: column;
+    }
+    #gallery-filter{
+        flex-direction: column;
+    }
+    .img-popup{
+        width: 95%;
+        height: 97%;
+    }
+    .close-popup{
+        position: static;
+        transform: translateX(40vw);
+        padding: 0;
+        border: 0;
+    }
+}

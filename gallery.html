@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wolfy's epic art dump - home page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script type="module" src="js/main.js" defer></script>
+</head>
+<body class="column g16">
+    <!-- header -->
+    <header class="standard-width column g8">
+        <img src="assets/banner.gif" alt="wolfy's epic art dump" class="banner-desktop mobile-hide">
+        <img src="assets/banner-just-wolfy.gif" alt="wolfy's epic art dump" class="banner-mobile moving-a-bit mobile-show">
+        <h1 class="p32 mobile-show rainbow-moving-text">wolfy's epic art dump</h1>
+        <nav class="row radius-8 b-shadow-16 p16 g8">
+            <a class="btn-1 p4-8 t1 radius-8" href="index.html">home</a>
+            <a class="btn-1 p4-8 t1 radius-8 page-indicator" href="gallery.html">gallery</a>
+            <a class="btn-1 p4-8 t1 radius-8" href="games.html">games</a>
+            <a class="btn-2 p4-8 t1 radius-8" href="https://www.youtube.com/@wolfygoofytoons?sub_confirmation=1" target="_blank">my channel</a>
+        </nav>
+    </header>
+    <!-- main part -->
+    <main class="standard-width b-shadow-16 radius-8 p32 g32 column">
+        <h2 class="moving-a-bit">here you can see my <span class="rainbow-moving-text">super cool gallery</span></h2>
+        <div id="gallery-filter" class="row w100 g16">
+            <input type="text" placeholder="Search for the title or description" id="input-gallery-filter" class="w100 p8-16 radius-8">
+            <span class="row g8">
+                <button class="btn-1 btn-selected p8-16 radius-8 t1" id="newest">Newest</button>
+                <button class="btn-1 p8-16 radius-8 t1" id="oldest">Oldest</button>
+                <button class="btn-1 p8-16 radius-8 t1" id="random">Random</button>
+            </span>
+        </div>
+        <h3 class="parag-grey">stay tunned for more gallery updates !!!</h3>
+        <section id="gallery-main-area" class="g16">
+            <!-- drawings -->
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="standard-width row s-between g8 radius-8 b-shadow-16 p16">
+        <div class="column g8">
+            <p class="parag-white">all art and content on this website belongs to me, check out my channel for more stuff !!!</p>
+            <hr>
+            <p class="parag-white parag2"> © 2025 WolfyGoofyToons. All rights reserved. </p>
+        </div>
+        <img src="assets/the-round.png" id="round-boi" alt="click the wolfy">
+    </footer>
+</body>
+</html>

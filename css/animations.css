@@ -1,0 +1,95 @@
+/* animations */
+@keyframes rainbow-moving-text{
+    0%{
+        color: #ff0000;
+        transform: translateX(0px) rotateZ(0) scale(1);
+    }
+    14%{
+        color: #ffa500;
+        transform: translateX(-2px) rotateZ(-2deg) scale(1.01);
+    }
+    28%{
+        color: #ffff00;
+        transform: translateX(0px) rotateZ(2deg) scale(.99);
+    }
+    42%{
+        color: #008000;
+        transform: translateX(2px) rotateZ(-1deg) scale(1.03);
+    }
+    56%{
+        color: #0000ff;
+        transform: translateX(0px) rotateZ(4deg) scale(1.02);
+    }
+    70%{
+        color: #4b0082;
+        transform: translateX(-2px) rotateZ(-2deg) scale(.98);
+    }
+    84%{
+        color: #ee82ee;
+        transform: translateX(0px) rotateZ(2deg) scale(1);
+    }
+    100%{
+        color: #ff0000;
+        transform: translateX(2px) rotateZ(0    ) scale(1);
+    }
+}
+.rainbow-moving-text{
+    animation: rainbow-moving-text 5s ease-in-out infinite;
+}
+
+@keyframes moving-a-bit {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  10%  { transform: translate(1px, -0.5px) rotate(-0.2deg); }
+  20%  { transform: translate(-0.6px, 0.4px) rotate(0.2deg); }
+  30%  { transform: translate(0.4px, 0.6px) rotate(0deg); }
+  40%  { transform: translate(-0.4px, -1px) rotate(0.1deg); }
+  50%  { transform: translate(0.3px, 0.3px) rotate(-0.1deg); }
+  60%  { transform: translate(-1px, -0.4px) rotate(0deg); }
+  70%  { transform: translate(0.5px, -0.3px) rotate(0.1deg); }
+  80%  { transform: translate(-0.6px, 0.5px) rotate(-0.1deg); }
+  90%  { transform: translate(0.4px, -0.4px) rotate(0deg); }
+  100% { transform: translate(0px, 1px) rotate(0deg); }
+}
+.moving-a-bit{
+    animation: moving-a-bit 5s ease-in-out infinite;
+}
+
+@keyframes open-popup{
+    from{ scale: 0; }
+    to{ scale: 1; }
+}
+@keyframes close-popup{
+    from{ scale: 1; }
+    to{ scale: 0; }
+}
+@keyframes open-popup-block{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+@keyframes close-popup-block{
+    from{ opacity: 1; }
+    to{ opacity: 0; }
+}
+.open-popup{
+    animation: open-popup .2s ease-in-out;
+}
+.close-popup{
+    animation: close-popup .2s ease-in-out;
+}
+.open-popup-block{
+    animation: open-popup-block .2s ease-in-out;
+}
+.close-popup-block{
+    animation: close-popup-block .2s ease-in-out;
+}
+
+/*transitions*/
+.t1{
+    transition: all 0.1s;
+}
+.t2{
+    transition: all 0.5s;
+}
+.t3{
+    transition: all 1s;
+}
