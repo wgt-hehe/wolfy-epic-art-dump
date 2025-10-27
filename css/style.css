@@ -11,11 +11,15 @@
     --yellow: #ffe732;
 }
 /* general stuff */
+@font-face {
+  font-family: comicsans;
+  src: url(../assets/font/comic.ttf);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: cursive, 'MS comic sans';
+    font-family: comicsans, 'comic sans ms', cursive;
     user-select: none;
     color: var(--dark);
 }
