@@ -40,6 +40,8 @@ export class ImageGallery{
     async _renderViaQueryString(){
         const params = new URLSearchParams(window.location.search);
         const title = params.get("title");
+        if(!title) return;
+        
         fetch('data/gallery-data.json').then(res => res.json()).then(data => {
             const specific = data.filter(drawing => drawing.title.toLowerCase() == title.toLowerCase())[0];
             const specificImgElement = document.querySelector(`img[title='${specific.title}']`);
