@@ -44,7 +44,7 @@ export class ImageGallery{
         
         fetch('data/gallery-data.json').then(res => res.json()).then(data => {
             const specific = data.filter(drawing => drawing.title.toLowerCase() == title.toLowerCase())[0];
-            const specificImgElement = document.querySelector(`img[title='${specific.title}']`);
+            const specificImgElement = document.querySelector(`img[title="${specific.title}"]`);
             this._open(specificImgElement);
         });
     }
