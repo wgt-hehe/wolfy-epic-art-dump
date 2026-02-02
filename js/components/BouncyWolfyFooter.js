@@ -8,7 +8,7 @@ export class BouncyWolfyFooter{
     _init(){
         let toggle = false;
 
-        this.wolfy.addEventListener("click", () => {
+        this.wolfy?.addEventListener("click", () => {
             toggle = !toggle;
             this.wolfy.src = toggle ? "assets/the-round-blush.png" : "assets/the-round.png";
             this.bounce += 2;

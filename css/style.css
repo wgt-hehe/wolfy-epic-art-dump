@@ -21,6 +21,7 @@
     box-sizing: border-box;
     font-family: comicsans, 'comic sans ms';
     user-select: none;
+    line-height: 1.5;
     color: var(--dark);
 }
 header{
@@ -96,6 +97,8 @@ button{
 }
 *[class^=btn]{
     width: fit-content;
+    align-items: center;
+    background: white;
 }
 .btn-1{
     transform: translateY(0);
@@ -119,6 +122,9 @@ button{
     color: white;
     border: 0;
 }
+.btn-big{
+    font-size: 32px;
+}
 .btn-selected:hover{
     background: var(--dark-red);
     color: white;
@@ -136,6 +142,8 @@ button{
 .s-around{ justify-content: space-around; }
 .s-between{ justify-content: space-between; }
 .s-center{ justify-content: center; }
+.wrap{ flex-wrap: wrap; }
+.align-center{ align-items: center; }
 
 /* paragraph sizes and styles */
 .parag1{ font-size: .8rem; }
@@ -143,8 +151,10 @@ button{
 .parag3{ font-size: .6rem; }
 .parag-white{ color: white }
 .parag-grey{ color: var(--regular) }
+.parag-red{ color: var(--red) }
 
 /* gaps */
+.g4{ gap: 4px; }
 .g8{ gap: 8px; }
 .g16{ gap: 16px; }
 .g32{ gap: 32px; }
@@ -177,7 +187,20 @@ button{
 .wfit { width: fit-content; }
 .hfit { height: fit-content; }
 
-/* gallery elements */
+/* icon */
+.icon-s{
+    width: 16px;
+    height: 16px;
+}
+.icon-m{
+    width: 24px;
+    height: 24px;
+}
+.icon-b{
+    width: 32px;
+    height: 32px;
+}
+/* gallery page elements */
 #gallery-main-area{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -225,4 +248,40 @@ button{
     height: 100vh;
     background: linear-gradient(to top, rgba(0,0,0,.20), rgba(190, 190, 190, 0.2));
     backdrop-filter: blur(2px);
+}
+
+/* game page elements */
+.game-list-item{
+    overflow: hidden;
+}
+.game-thumb{
+    height: 300px;
+    width: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+}
+.game-controls-panel{
+    position: absolute;
+    width: 50%;
+    max-width: 670px;
+    opacity: 0;
+    height: 0;
+    max-height: 300px;
+    overflow: auto;
+    background: white;
+    scrollbar-color: var(--red) rgba(0,0,0,0);
+    /* pointer-events: none; */
+    transform: translateY(-102px);
+}
+.panel-opened{
+    opacity: 1 !important;
+    height: 300px;
+    pointer-events: unset !important;
+}
+.key-control{
+    border-radius: 8px;
+    background: var(--red);
+    color: white;
+    padding: 5px 10px;
 }
