@@ -83,6 +83,34 @@
     animation: close-popup-block .2s ease-in-out;
 }
 
+/* game thumbnails */
+@keyframes game-thumb-anim {
+    0%, 100% {
+        background-image: url(../assets/game-thumbs/game1_1.png);
+        opacity: 1;
+    }
+    16.66% {
+        opacity: 1;
+    }
+    33.32% {
+        background-image: url(../assets/game-thumbs/game1_2.png);
+        opacity: 1;
+    }
+    49.98% {
+        opacity: 1;
+    }
+    66.64% {
+        background-image: url(../assets/game-thumbs/game1_3.png);
+        opacity: 1;
+    }
+    83.30% {
+        opacity: 1;
+    }
+}
+#game1-thumb-anim{
+    animation: game-thumb-anim 10s infinite;
+}
+
 /*transitions*/
 .t1{
     transition: all 0.1s;

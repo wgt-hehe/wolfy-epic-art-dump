@@ -59,4 +59,17 @@
         padding: 0;
         border: 0;
     }
+    /* game */
+    .game-list-item{
+        flex-direction: column;
+    }
+    .game-thumb{
+        width: 100%;
+        height: 200px;
+    }
+    .game-controls-panel{
+        width: calc(100% - 32px);
+        right: 16px;
+        transform: translateY(-190px);
+    }
 }
