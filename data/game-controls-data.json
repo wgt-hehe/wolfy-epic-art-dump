@@ -1,0 +1,44 @@
+{
+    "game1": [
+        { "description": "Move around, fart and inflate! You can also interact with the NPCs in really wacky and weird wats and make em inflate with your farts! Explore the area and have fun." },
+        {
+            "key": ["<", ">"],
+            "func": "moving / rolling"
+        },
+        {
+            "key": ["space"],
+            "func": "jump"
+        },
+        {
+            "key": ["Z"],
+            "func": "build up gas"
+        },
+        {
+            "key": ["X"],
+            "func": "Super Fart / fartinflate enemies"
+        },
+        {
+            "key": ["C"],
+            "func": "Burp! (Press and release for more power)"
+        },     
+        {
+            "key": ["A"],
+            "func": "Interact"
+        },       
+        {
+            "key": ["1", "2", "3", "4", "5", "6", "7"],
+            "func": "Change cat variant"
+        },       
+        {
+            "key": ["P"],
+            "func": "Pause"
+        },     
+        {
+            "key": ["Q", "scroll wheel"],
+            "func": "camera controls"
+        } 
+    ],
+    "game2": [],
+    "game3": [],
+    "game4": []
+}
